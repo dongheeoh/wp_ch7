@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
+<script>
+
+// 엘레먼트를 골라야 하는 시점1(Vanila JavaScript)
+window.onload=function(){
+	console.log("여기서 시작1");
+}
+
+// 엘레먼트를 골라야 하는 시점2 
+var $document= jQuery(document);
+$document.ready(function(){
+	console.log("여기서 시작2");
+});
+//엘레먼트를 골라야 하는 시점3( jQuery 사용)
+$(document).ready(function(){
+	console.log("여기서 시작3");
+});
+
+//엘레먼트를 골라야 하는 시점4( jQuery 사용)
+$(function(){
+	console.log("여기서 시작4");
+});
+
+</script>
+</head>
+<body>
+<p>
+    이 문장이 보이고 Hello World가 뜨면, 자바스크립트에서 HTML 엘리멘트에 접근할 수
+    있는 것입니다. 
+</p>
+</body>
+</html>

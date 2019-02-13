@@ -29,7 +29,24 @@ li.on	{ background-color:#287FC2; color:#fff }
 	$( function() {
 			
 		/* 코드를 완성하세요 */
-		
+		$("ul li")
+		.mouseover(function(){
+			//이벤트 핸들러 안에서 this는 이벤트를 받고 있는 HTMLElement객체이다.
+			//따라서 jQuery API를 사용하기 위해서는 $()래핑을 해야한다.
+			//
+			//$(this).css({
+			//	backgroundColor:"#287fc2",
+			//	color:"#fff"
+			//});
+			$(this).addClass("on");
+		})
+		.mouseout(function(){
+			//$(this).css({
+			//	backgroundColor:"#fff",
+			//	color:"#333"
+			//});
+			$(this).removeClass("on");
+		});
 	} );  
 </script>
 </head>
